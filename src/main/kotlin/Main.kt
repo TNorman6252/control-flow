@@ -33,6 +33,13 @@ fun rangeOf(number: Int){
     //TODO This function takes in a number and prints out the range that the number falls in.
     // The ranges are: (0 or below) (1 to 5), (6 to 10), (11 to 20), (21+)
     // For example, if the number was 7, print out a message saying that the number 7 falls into the range 6 to 10.
+    when(number) {
+        in 0 downTo Int.MIN_VALUE -> println("$number falls into the range 0 or below")
+        in 1..5 -> println("$number falls into the range 1 to 5")
+        in 6..10 -> println("$number falls into the range 6 to 10")
+        in 11..20 -> println("$number falls into the range 11 to 20")
+        in 21..Int.MAX_VALUE -> println("$number falls into the range 21+")
+    }
 }
 
 fun inferredTypeOf(variable: Any){
