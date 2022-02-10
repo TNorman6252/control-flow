@@ -1,3 +1,5 @@
+import java.util.*
+
 //TODO INSTRUCTIONS:
 //  1. Now that you have the code in IntelliJ on your computer, use VCS to "Share this project to your GitHub repo
 //     that is attached to your student email.  MAKE SURE YOU HAVE THIS REPO SET TO PRIVATE.
@@ -64,4 +66,25 @@ fun stringContains(str : String){
     //    - contains the letter C, print the string and say it contains C.
     //    - is empty, inform the user that it is empty.
     //    - otherwise print the string and say it doesn't contain A, B or C.
+//    if(str.uppercase(Locale.getDefault()).contains('A')) {
+//        println("$str contains the letter 'A'")
+//    } else if(str.uppercase(Locale.getDefault()).contains('B')) {
+//        println("$str contains the letter 'B'")
+//    } else if(str.uppercase(Locale.getDefault()).contains('C')) {
+//        println("$str contains the letter 'C'")
+//    } else if(str.isEmpty()) {
+//        println("The String is empty")
+//    } else {
+//        println("$str doesn't contain A, B or C")
+//    }
+
+    when {
+        str.contains('A') -> println("$str contains the letter 'A'")
+        str.contains('B') -> println("$str contains the letter 'B'")
+        str.contains('C') -> println("$str contains the letter 'C'")
+        str.isEmpty() -> println("The String is empty")
+        !str.contains('A') || !str.contains('B') || !str.contains('C') -> println("$str doesn't contain A, B or C")
+    }
+
+
 }
